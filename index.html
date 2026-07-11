@@ -2,11 +2,11 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Дворников Матвей (AI-тренер)</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   @page { size: A4; margin: 0; }
-  html, body { width: 210mm; }
   body {
     font-family: "SF Pro Text", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     color: #1d1d1f;
@@ -17,12 +17,14 @@
   }
   .page {
     width: 210mm;
+    max-width: 100%;
+    background: #fff;
     min-height: 297mm;
     display: flex;
     flex-direction: column;
   }
 
-
+ 
   .header {
     padding: 7mm 14mm 4.5mm;
     border-bottom: 0.6mm solid #d6482b;
@@ -65,7 +67,7 @@
     background: #faf6f0;
   }
 
-
+ 
   h2 {
     font-size: 8.4pt;
     font-weight: 700;
@@ -77,7 +79,7 @@
   .side h2 { margin-top: 3mm; }
   .main h2:first-child, .side h2:first-child { margin-top: 0; }
 
-
+ 
   .job { margin-bottom: 3mm; padding-left: 4.5mm; position: relative; }
   .job::before {
     content: "";
@@ -105,9 +107,8 @@
     color: #d6482b;
   }
 
-
+ 
   .about p { margin-bottom: 1.2mm; }
-
 
   .contact { list-style: none; }
   .contact li { margin-bottom: 1.4mm; }
@@ -142,6 +143,19 @@
   .edu .school { font-weight: 700; font-size: 10pt; }
   .edu .dir { margin-top: 0.4mm; }
   .edu .years { color: #666; font-size: 9pt; margin-top: 0.4mm; }
+  @media screen {
+    body { background: #ebe7e1; }
+    .page {
+      margin: 28px auto;
+      box-shadow: 0 12px 48px rgba(0,0,0,0.18);
+      border-radius: 2mm;
+      overflow: hidden;
+    }
+  }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; border-radius: 0; }
+  }
 </style>
 </head>
 <body>
